@@ -1,0 +1,22 @@
+<form class="flex gap-5 justify-center" (submit)="handleImport($event)">
+    <mat-form-field id="regionSelector">
+        <mat-label>Region</mat-label>
+        <mat-select (selectionChange)="handleRegionChange($event)" >
+            <mat-option value="eu">EU</mat-option>
+            <mat-option value="us">US</mat-option>
+            <mat-option value="tw">TW</mat-option>
+            <mat-option value="kr">KR</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Character name</mat-label>
+        <input matInput (input)="handleNameChange($event)" >
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Select realm</mat-label>
+        <mat-select (selectionChange)="handleRealmChange($event)">
+            <mat-option [value]="realm.value" *ngFor="let realm of realms" >{{realm.label}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button mat-raised-button color="primary" >Import</button>
+</form>

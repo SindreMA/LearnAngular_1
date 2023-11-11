@@ -1,0 +1,85 @@
+$bg-color: rgb(67, 67, 67);
+
+:host {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex: 1;
+    background-color: $bg-color;
+    color: white;
+}
+
+#header {
+    background-color: rgb(39, 39, 39);
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0 40px;
+    gap: 40px;
+    z-index: 1000;
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        height: 70%;
+        text-align: center;
+        display: flex;
+        border-radius: 5px;
+        justify-content: center;
+        align-items: center;
+        padding: 0 25px;
+        background: rgb(22, 22, 22);
+        transition: all 0.1s ease-in-out;
+}
+    a:hover {
+        background: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        transform: scale(1.1);
+    }
+    .active {
+        border: 1px solid rgb(255, 255, 255);
+    }
+}
+
+.navItem {
+    font-size: 20px;
+
+}
+
+#PageContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
+#footer {
+    background-color: rgb(39, 39, 39);
+    width: 100%;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ComponentContainer {
+    overflow: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ComponentContainerChild {
+    padding: 20px;
+    max-width: 1200px;
+
+}

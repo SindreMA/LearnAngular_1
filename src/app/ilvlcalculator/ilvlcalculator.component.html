@@ -1,0 +1,33 @@
+<div class="Container w-full flex-col justify-center">
+    <div class="w-full flex justify-center">
+        <h1>Item level calculator</h1>
+    </div>
+    <br>
+    <app-char-import (onImport)="handleImport($event)"></app-char-import>
+    <div class="wowBg" >
+        <div class="charContainer" [style]="getCharImage()">
+            <div class="w-full commonContainer">
+                <app-item-slot 
+                    *ngFor="let slot of commonSlots" 
+                    [slotName]="slot" 
+                    (onChange)="handleSlotChange(slot,$event)" 
+                    [value]="data[slot.toLowerCase()]" 
+                    [disabled]="isDisabled(slot)" 
+                />
+            </div>
+            <div class="weaponContainer">
+                <app-item-slot 
+                    *ngFor="let slot of weaponSlots" 
+                    [slotName]="slot" 
+                    (onChange)="handleSlotChange(slot,$event)" 
+                    [value]="data[slot.toLowerCase()]" 
+                />
+            </div>
+            <div class="flex justify-center">
+                <div class="ilvlContainer">
+                    Item level: {{getAverageIlvl()}}
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>

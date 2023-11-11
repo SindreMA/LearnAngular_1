@@ -1,0 +1,15 @@
+<div id="PageContainer">
+    <div id="header">
+        <a [routerLink]="navItem.link" *ngFor="let navItem of navItems" routerLinkActive="active">
+            {{navItem.label}}
+        </a>
+    </div>
+    <div class="flex flex-1 ComponentContainer">
+        <div class="ComponentContainerChild">
+            <ng-content></ng-content>
+        </div>
+    </div>
+    <div id="footer">
+        Created by <a class="underline" href="https://github.com/SindreMA/" style="margin-left: 5px;" >{{'@SindreMA'}}</a>
+    </div>                
+</div>

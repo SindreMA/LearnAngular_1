@@ -1,0 +1,87 @@
+$bg-color: rgb(67, 67, 67);
+
+
+.wowBg {
+    background-image: url("/assets/images/wow-background.jpg");
+    background-size: cover;
+    border-radius: 20px;
+    zoom: 0.9;
+}
+
+.charContainer {
+    background-position: 46% -55px;
+    background-size: cover;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 800px;
+    padding: 60px 0;
+    height: 1050px;
+    box-shadow: 0 0 8px 8px $bg-color inset;
+    font-size: 24px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.ilvlContainer {
+    background: $bg-color;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: solid 3px black;
+    margin-top: -20px;
+}
+
+.commonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px 35%;
+    flex-flow: column wrap;
+    max-height: 800px;
+}
+
+.weaponContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+:host {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
+h5 {
+    font-size: 1em;
+}
+
+h6 {
+    font-size: 0.8em;
+}
