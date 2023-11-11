@@ -12,6 +12,7 @@ import { RouterModule, RouterLink, Router } from '@angular/router';
 export class LayoutComponent {
     navItems: {link: string, label: string}[] = [
         {link: '/ilvlcalculator', label: 'iLvl Calculator'},
+        {link: '/ffx-player-search', label: 'FFX Player Search'},
         {link: '/about', label: 'About'},
     ]
 

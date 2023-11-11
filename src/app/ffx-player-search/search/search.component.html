@@ -1,0 +1,10 @@
+<div>
+    <p>Search for a player by name</p>
+    <div class="flex gap-5">
+        <mat-form-field class="example-full-width">
+            <mat-label>Player name</mat-label>
+            <input matInput [(ngModel)]="playerSearch">
+        </mat-form-field>
+        <button style="height: 56px;" mat-raised-button color="primary" (click)="search">Search</button>
+    </div>
+</div>
