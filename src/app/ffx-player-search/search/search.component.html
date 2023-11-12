@@ -5,6 +5,12 @@
             <mat-label>Player name</mat-label>
             <input matInput [(ngModel)]="playerSearch">
         </mat-form-field>
-        <button style="height: 56px;" mat-raised-button color="primary" (click)="search">Search</button>
+        <mat-form-field id="regionSelector">
+            <mat-label>Server</mat-label>
+            <mat-select [(ngModel)]="serverInput">
+                <mat-option *ngFor="let server of servers$" [value]="server">{{server}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <button style="height: 56px;" mat-raised-button color="primary" (click)="search()">Search</button>
     </div>
 </div>

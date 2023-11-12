@@ -1,1 +1,7 @@
-<p>ffx-player-list works!</p>
+<div class="w-full justify-center flex">
+    <mat-spinner style="position: fixed; top: 500px;" *ngIf="loading"></mat-spinner>
+
+    <div class="flex w-full gap-5 flex-wrap" >
+        <app-ffx-player-list-item *ngFor="let player of data" [player]="player"></app-ffx-player-list-item>
+    </div>
+</div>

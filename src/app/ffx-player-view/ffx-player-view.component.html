@@ -1,1 +1,13 @@
-<p>ffx-player-view works!</p>
+<div class="flex justify-items-center gap-5">
+    <img [src]="player.Portrait" alt="FFXIV Logo" class="logo">
+    <div>
+        <h1>{{player.Name}}</h1>
+        <p>{{player.Server}}</p>
+        <br>
+        <div class="flex flex-wrap gap-5">
+            <div class="classItem" *ngFor="let classjob of jobsWithLevels()">
+                <p> {{classjob.Name}} {{classjob.Level}}</p>
+            </div>            
+        </div>
+    </div>
+</div>

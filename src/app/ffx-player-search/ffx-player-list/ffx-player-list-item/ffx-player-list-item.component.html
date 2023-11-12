@@ -1,1 +1,17 @@
-<p>ffx-player-list-item works!</p>
+<div class="playerItem shadow-md">
+    <div class="flex w-full justify-center">
+        <img src="{{player?.Avatar}}" alt="Avatar" class="avatar">
+    </div>
+    <p class="greyText w-full text-center">{{player.ID}}</p>
+    <br>
+    <div class="playerInfo flex-col justify-center text-center">
+        <h3>{{player?.Name}}</h3>
+        <p>{{player?.Server}}</p>
+    </div>
+    <br>
+    <div class="flex w-full justify-center">
+        <a [routerLink]="profileLink" >
+            <button mat-raised-button color="primary">View profile</button>
+        </a>
+    </div>
+</div>

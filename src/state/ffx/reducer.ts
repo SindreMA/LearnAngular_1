@@ -1,11 +1,19 @@
 import { createReducer, on } from '@ngrx/store';
-import { increment, decrement, reset } from './actions';
+import { setClasses, setServers } from './actions';
 
-export const initialState = 0;
+export const initialState = {
+    servers: [] as string[],
+    classes: [] 
+};
 
-export const counterReducer = createReducer(
+type IFFXState = typeof initialState;
+
+export const ffxReducer = createReducer(
   initialState,
-  on(increment, (state) => state + 1),
-  on(decrement, (state) => state - 1),
-  on(reset, (state) => 0)
+  on(setClasses, (state, props) => ({ ...state, classes: props.classes })),
+    on(setServers, (state, props) => {
+        console.log(props);
+        
+        return ({ ...state, servers: props.servers })
+    })
 );
